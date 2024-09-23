@@ -1,4 +1,2 @@
 #!/bin/bash
-echo -n "./, ../, "
-ls -1a | grep -v '^..$' | grep -v '^.$' | sed 's/$/\//' | tr '\n' ',' | sed 's/,$//'
-echo
+echo -n "./, ../, "; ls -1a | grep -v '^..$' | grep -v '^.$' | sed 's/$/\//' | tr '\n' ',' | sed 's/,$//'; echo
