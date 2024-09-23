@@ -1,2 +1,2 @@
 #!/bin/bash
- -a1p | sort -f | grep -v '^./$' | grep -v '^\.\.$' | awk '{printf "%s, ", $0} END {print ""}'
+(printf "./, ../, "; ls -1a | grep -v '^..$' | grep -v '^.$' | sed 's/$/\//' | tr '\n' ','; echo)
