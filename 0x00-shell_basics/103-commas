@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -1a | grep -v '^..$' | grep -v '^.$' | sed 's/\(.*\)/\1/' | tr '\n' ',' | sed 's/,$//' | sed '1s/^/., .., /'
-
+ls -1aF | sort | tr '\n' ',' | sed 's/,$/\n/'
